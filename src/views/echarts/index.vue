@@ -1,5 +1,6 @@
 <template>
 <div>
+  <div class="bg"></div>
   <div id="echarts"></div>
 </div>
 </template>
@@ -163,10 +164,22 @@ export default {
 <style lang="less" scoped>
   #echarts{
     width: 100%;
-    height: 740px;
+    height: 700px;
     margin-left: auto;
+    // opacity:！1;
     margin-right: auto;
-    background-color: aqua;
-    float: right;
+    // background-color: aqua;
+    // float: right;
+    z-index: 1;
+  }
+  .bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/img/bg.jpg);
+    background-size: cover; /* 使图片平铺满整个浏览器（从宽和高的最大需求方面来满足，会使某些部分无法显示在区域中） */
+    position: absolute; /* 不可缺少 */
+    opacity:0.7;
+    z-index: -1;
+    background-repeat: no-repeat;
   }
 </style>
